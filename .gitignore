@@ -1,3 +1,12 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# keypair file
 keypair.tf
+
+# variable configuration file
 terraform.tfvar
-.terraform/
