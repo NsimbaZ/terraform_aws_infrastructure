@@ -5,8 +5,6 @@
 *.tfstate
 *.tfstate.*
 
-# key file
-*.tfstate.backup
-
 # variable configuration file
-terraform.tfvar
+# currently have local IP in file. modify code
+terraform.tfvar 
