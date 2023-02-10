@@ -6,7 +6,6 @@
 *.tfstate.*
 
 # key file
-keypair.tf
 *.tfstate.backup
 
 # variable configuration file
