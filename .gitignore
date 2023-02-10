@@ -5,8 +5,9 @@
 *.tfstate
 *.tfstate.*
 
-# keypair file
+# key file
 keypair.tf
+*.tfstate.backup
 
 # variable configuration file
 terraform.tfvar
