@@ -10,7 +10,6 @@ resource "aws_security_group" "alb_sg" {
     to_port          = 443
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
-    #ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
   }
     ingress {
     description      = "inbound HTTP"
@@ -33,21 +32,6 @@ resource "aws_security_group" "alb_sg" {
   }
 }
 
-# ......................### group 2 Bastion host
-# get my IP
-######
-/*
-data "external" "myip"{
-  program = ["PowerShell","-c","curl -s 'https://ipinfo.io/json'"]
-}
-
-output "localip"{
-  value = "${data.external.myip.result.ip}"
-}
-*/
-# if on windows, program would be cmd or power shell, but flow is the same.
-
-#####
 resource "aws_security_group" "bastion_host_sg" {
   name        = "bastion_host_sg"
   description = "Allow inbound from my IP to port 22, and all outbound"
@@ -58,7 +42,7 @@ resource "aws_security_group" "bastion_host_sg" {
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = var.localhost_IP # 
+    cidr_blocks      = ["0.0.0.0/0"]
   }
 
   egress {

@@ -9,5 +9,3 @@ env_name = "dev"
 team_name = "config management"
 route = ["0.0.0.0/0"]
 keypair_name = "utc_key"
-localhost_IP = ["174.173.62.231/32"] # my localhost IP. ctnd.
-## ctnd.. the default is to allow all traffic

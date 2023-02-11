@@ -56,11 +56,6 @@ variable "route" {
 
 }
 
-variable "localhost_IP" {
-  type    = list(any)
-  default = ["0.0.0.0/0"] # allow all traffic as default
-}
-
 variable "keypair_name" {
   type    = string
   default = "utc_key"
